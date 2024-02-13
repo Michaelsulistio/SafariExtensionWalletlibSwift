@@ -1,6 +1,6 @@
 use_frameworks!
 
-platform :ios, '10.0'
+platform :ios, '15.0'
 
 target 'SafariExtensionWalletlibSwift_Example' do
   pod 'SafariExtensionWalletlibSwift', :path => '../'

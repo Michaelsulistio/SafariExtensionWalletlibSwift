@@ -6,8 +6,22 @@ import SafariExtensionWalletlibSwift
 
 class TableOfContentsSpec: QuickSpec {
     override func spec() {
-        describe("these will fail") {
-
+        describe("Basic Request Processing") {
+            let rpcRequestProcessor = RPCRequestProcessor()
+            // Process the request
+            rpcRequestProcessor.processExtensionRequest(NSExtensionContext()) { request, completion in
+                // Here, you'd handle different types of requests based on `request.method`
+                switch request.method {
+                case "testMethod":
+                    print("Handling testMethod")
+                    // Create a mock response
+                    // Call completion with the mock response
+                    completion(response)
+                default:
+                    print("Unknown method")
+                    // Optionally, you could call completion with an error response here
+                }
+            }
             it("can do maths") {
                 expect(1) == 2
             }
